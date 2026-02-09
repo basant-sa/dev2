@@ -22,7 +22,7 @@ namespace dev2
             this.Close();
         }
 
-        private void bExecuter_Click(object sender, EventArgs e)
+        private async void bExecuter_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
             bExecuter.Enabled = false;
@@ -44,7 +44,7 @@ namespace dev2
 
                 for (int j = 0; j < taille; j++)
                 {
-                    System.Threading.Thread.Sleep(50);  
+                    await Task.Delay(1000);
                     pbSecondaire.Value++;
                 }
 

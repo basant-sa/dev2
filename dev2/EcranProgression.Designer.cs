@@ -34,7 +34,6 @@
             this.pbSecondaire = new System.Windows.Forms.ProgressBar();
             this.bExecuter = new System.Windows.Forms.Button();
             this.bQuitter = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lPrincipal
@@ -98,21 +97,11 @@
             this.bQuitter.UseVisualStyleBackColor = true;
             this.bQuitter.Click += new System.EventHandler(this.bQuitter_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(488, 260);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // EcranProgression
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.bQuitter);
             this.Controls.Add(this.bExecuter);
             this.Controls.Add(this.pbSecondaire);
@@ -134,6 +123,5 @@
         private System.Windows.Forms.ProgressBar pbSecondaire;
         private System.Windows.Forms.Button bExecuter;
         private System.Windows.Forms.Button bQuitter;
-        private System.Windows.Forms.Button button1;
     }
 }
