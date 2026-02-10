@@ -17,9 +17,37 @@ namespace dev2
             InitializeComponent();
         }
 
-        private void barreDeProgressionToolStripMenuItem_Click(object sender, EventArgs e)
+        //private void barreDeProgressionToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    EcranProgression E= new EcranProgression();
+        //    E.ShowDialog();
+        //}
+
+
+        private void MethodeNonImplemente()
         {
-            EcranProgression E= new EcranProgression();
+            MessageBox.Show("Fonction non implémentée.");
+            
+        }
+
+        private void listeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MethodeNonImplemente();
+        }
+
+        private void editeurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MethodeNonImplemente();
+        }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void barreDeProgressionToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            EcranProgression E = new EcranProgression();
             E.ShowDialog();
         }
     }
