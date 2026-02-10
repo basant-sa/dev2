@@ -46,6 +46,8 @@
             // 
             // barreDeProgressionToolStripMenuItem
             // 
+            this.barreDeProgressionToolStripMenuItem.BackColor = System.Drawing.Color.Peru;
+            this.barreDeProgressionToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.barreDeProgressionToolStripMenuItem.Name = "barreDeProgressionToolStripMenuItem";
             this.barreDeProgressionToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
             this.barreDeProgressionToolStripMenuItem.Text = "Barre de progression";
