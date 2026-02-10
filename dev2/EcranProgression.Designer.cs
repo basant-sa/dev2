@@ -45,6 +45,7 @@
             this.lPrincipal.Size = new System.Drawing.Size(148, 16);
             this.lPrincipal.TabIndex = 0;
             this.lPrincipal.Text = "Progression globale";
+            this.lPrincipal.Click += new System.EventHandler(this.lPrincipal_Click);
             // 
             // lSecondaire
             // 

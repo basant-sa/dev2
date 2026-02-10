@@ -130,6 +130,7 @@
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
             this.aProposToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aProposToolStripMenuItem.Text = "A Propos";
+            this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
             // 
             // Form1
             // 

@@ -50,5 +50,11 @@ namespace dev2
             EcranProgression E = new EcranProgression();
             E.ShowDialog();
         }
+
+        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EcranAPropos F = new EcranAPropos();
+            F.ShowDialog();
+        }
     }
 }

@@ -55,5 +55,10 @@ namespace dev2
             bExecuter.Enabled = true;
             bQuitter.Enabled = true;
         }
+
+        private void lPrincipal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
