@@ -39,6 +39,7 @@
             this.editeurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.S3 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,7 +114,7 @@
             // editeurToolStripMenuItem
             // 
             this.editeurToolStripMenuItem.Name = "editeurToolStripMenuItem";
-            this.editeurToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.editeurToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.editeurToolStripMenuItem.Text = "Editeur";
             this.editeurToolStripMenuItem.Click += new System.EventHandler(this.editeurToolStripMenuItem_Click);
             // 
@@ -132,11 +133,22 @@
             this.aProposToolStripMenuItem.Text = "A Propos";
             this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
             // 
+            // S3
+            // 
+            this.S3.Location = new System.Drawing.Point(33, 83);
+            this.S3.Name = "S3";
+            this.S3.Size = new System.Drawing.Size(75, 23);
+            this.S3.TabIndex = 2;
+            this.S3.Text = "S3";
+            this.S3.UseVisualStyleBackColor = true;
+            this.S3.Click += new System.EventHandler(this.S3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.S3);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
@@ -162,6 +174,7 @@
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editeurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
+        private System.Windows.Forms.Button S3;
     }
 }
 

@@ -56,5 +56,11 @@ namespace dev2
             EcranAPropos F = new EcranAPropos();
             F.ShowDialog();
         }
+
+        private void S3_Click(object sender, EventArgs e)
+        {
+            EcranListe L=new EcranListe();
+            L.ShowDialog();
+        }
     }
 }
