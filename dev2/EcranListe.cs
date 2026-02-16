@@ -36,5 +36,39 @@ namespace dev2
             Activer(true);
             //cbQualite.SelectedIndex = 0;
         }
+
+        private void bAjouter_Click(object sender, EventArgs e)
+
+        {
+            tbNom.Text = "";
+            cbQualite.Text = "";
+            Activer(false);
+        }
+
+        private void bSupprimer_Click(object sender, EventArgs e)
+        {
+            if (lbPersonne.SelectedIndex != -1)
+            {
+                lbPersonne.Items.RemoveAt(lbPersonne.SelectedIndex);
+            }
+        }
+
+        private void bAnnuler_Click(object sender, EventArgs e)
+        {
+            tbNom. Text = "";
+            cbQualite.Text = "";
+            Activer(true);
+        }
+
+        private void bConfirmer_Click(object sender, EventArgs e)
+        {
+            string nom = tbNom.Text;
+            string qualite= cbQualite.Text;
+
+            lbPersonne.Items.Add (nom + (qualite));
+            tbNom.Text = "";
+            cbQualite.Text = "";
+            Activer(true);
+        }
     }
 }

@@ -81,6 +81,7 @@
             this.bAnnuler.TabIndex = 3;
             this.bAnnuler.Text = "Annuler";
             this.bAnnuler.UseVisualStyleBackColor = true;
+            this.bAnnuler.Click += new System.EventHandler(this.bAnnuler_Click);
             // 
             // bConfirmer
             // 
@@ -90,6 +91,7 @@
             this.bConfirmer.TabIndex = 4;
             this.bConfirmer.Text = "Confirmer";
             this.bConfirmer.UseVisualStyleBackColor = true;
+            this.bConfirmer.Click += new System.EventHandler(this.bConfirmer_Click);
             // 
             // bOuvrir
             // 
@@ -117,6 +119,7 @@
             this.bSupprimer.TabIndex = 7;
             this.bSupprimer.Text = "Supprimer";
             this.bSupprimer.UseVisualStyleBackColor = true;
+            this.bSupprimer.Click += new System.EventHandler(this.bSupprimer_Click);
             // 
             // bAjouter
             // 
@@ -126,17 +129,12 @@
             this.bAjouter.TabIndex = 8;
             this.bAjouter.Text = "Ajouter";
             this.bAjouter.UseVisualStyleBackColor = true;
+            this.bAjouter.Click += new System.EventHandler(this.bAjouter_Click);
             // 
             // lbPersonne
             // 
             this.lbPersonne.FormattingEnabled = true;
             this.lbPersonne.ItemHeight = 16;
-            this.lbPersonne.Items.AddRange(new object[] {
-            "Madame",
-            "Mademoiselle",
-            "Monsieur",
-            "Mondamoiseau",
-            "Indéfini"});
             this.lbPersonne.Location = new System.Drawing.Point(12, 59);
             this.lbPersonne.Name = "lbPersonne";
             this.lbPersonne.Size = new System.Drawing.Size(286, 212);
@@ -146,6 +144,12 @@
             // 
             this.cbQualite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbQualite.FormattingEnabled = true;
+            this.cbQualite.Items.AddRange(new object[] {
+            "Madame",
+            "Mademoiselle",
+            "Monsieur",
+            "Mondamoiseau",
+            "Indéfini"});
             this.cbQualite.Location = new System.Drawing.Point(9, 59);
             this.cbQualite.Name = "cbQualite";
             this.cbQualite.Size = new System.Drawing.Size(121, 24);
