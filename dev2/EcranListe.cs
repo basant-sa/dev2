@@ -70,5 +70,35 @@ namespace dev2
             cbQualite.Text = "";
             Activer(true);
         }
+
+        private void bOuvrir_Click(object sender, EventArgs e)
+        {
+           if (ofdOuvrir.ShowDialog()==DialogResult.OK)
+           {
+
+                NomFichier=ofdOuvrir.FileName;
+                lbPersonne.Items.Clear();
+                 string[] lignes= System.IO.File.ReadAllLines(NomFichier);
+                foreach (string line in lignes) 
+                {
+                    lbPersonne.Items.Add(line);
+                }
+           }
+        }
+
+        private void bEnregistrer_Click(object sender, EventArgs e)
+        {
+            if (sfdEnregistrer.ShowDialog() == DialogResult.OK) 
+            {
+                NomFichier = sfdEnregistrer.FileName;
+                using (System.IO.StreamWriter sw = new System.IO.StreamWriter(NomFichier)) 
+                {
+                    foreach(string item in lbPersonne.Items)
+                    {
+                        sw.WriteLine(item);
+                    }
+                }
+            }
+        }
     }
 }

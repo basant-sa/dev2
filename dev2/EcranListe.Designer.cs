@@ -101,6 +101,7 @@
             this.bOuvrir.TabIndex = 5;
             this.bOuvrir.Text = "Ouvrir";
             this.bOuvrir.UseVisualStyleBackColor = true;
+            this.bOuvrir.Click += new System.EventHandler(this.bOuvrir_Click);
             // 
             // bEnregistrer
             // 
@@ -110,6 +111,7 @@
             this.bEnregistrer.TabIndex = 6;
             this.bEnregistrer.Text = "Enregistrer";
             this.bEnregistrer.UseVisualStyleBackColor = true;
+            this.bEnregistrer.Click += new System.EventHandler(this.bEnregistrer_Click);
             // 
             // bSupprimer
             // 
