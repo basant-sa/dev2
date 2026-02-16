@@ -34,7 +34,7 @@ namespace dev2
         private void EcranListe_Load(object sender, EventArgs e)
         {
             Activer(true);
-            cbQualite.SelectedIndex = 0;
+            //cbQualite.SelectedIndex = 0;
         }
     }
 }
