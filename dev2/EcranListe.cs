@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
 
 
 namespace dev2
@@ -115,13 +116,20 @@ namespace dev2
             if (sfdEnregistrer.ShowDialog() == DialogResult.OK) 
             {
                 NomFichier = sfdEnregistrer.FileName;
-                using (System.IO.StreamWriter sw = new System.IO.StreamWriter(NomFichier)) 
-                {
-                    foreach(string item in lbPersonne.Items)
-                    {
-                        sw.WriteLine(item);
-                    }
+                StreamWriter sw = new StreamWriter(NomFichier);
+
+                for (int i = 0; i < lbPersonne.Items.Count; i++)
+                { 
+                        string text=lbPersonne.Items[i].ToString();
+
+                    int encodage = SendMessage(lbPersonne.Handle,smLire,
+                        i,0);
+
+                    sw.WriteLine(text + "#" + encodage);
+
                 }
+                sw.Close();
+
             }
         }
 
