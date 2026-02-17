@@ -58,10 +58,49 @@ namespace dev2
 
         private void bSupprimer_Click(object sender, EventArgs e)
         {
-            if (lbPersonne.SelectedIndex != -1)
+            if (lbPersonne.SelectedIndex == -1)
             {
-                lbPersonne.Items.RemoveAt(lbPersonne.SelectedIndex);
+                MessageBox.Show("Veuillez sélectionner un élément");
+                return;
             }
+
+   
+            int indexSupprime = lbPersonne.SelectedIndex;
+
+           
+            int encodageSupprime = SendMessage(
+                lbPersonne.Handle,
+                smLire,
+                indexSupprime,
+                0
+            );
+
+            
+            lbPersonne.Items.RemoveAt(indexSupprime);
+
+           
+            for (int i = 0; i < lbPersonne.Items.Count; i++)
+            {
+                int encodage = SendMessage(
+                    lbPersonne.Handle,
+                    smLire,
+                    i,
+                    0
+                );
+
+                if (encodage > encodageSupprime)
+                {
+                    SendMessage(
+                        lbPersonne.Handle,
+                        smEcrire,
+                        i,
+                        encodage - 1
+                    );
+                }
+            }
+
+            
+            counter--;
         }
 
         private void bAnnuler_Click(object sender, EventArgs e)
@@ -104,11 +143,25 @@ namespace dev2
                 NomFichier=ofdOuvrir.FileName;
                 lbPersonne.Items.Clear();
                  string[] lignes= System.IO.File.ReadAllLines(NomFichier);
-                foreach (string line in lignes) 
+                lbPersonne.Items.Clear();
+                counter = 0;
+
+                foreach (string line in lignes)
                 {
-                    lbPersonne.Items.Add(line);
+                    int pos = line.LastIndexOf("#");
+
+                    string texte = line.Substring(0, pos);
+                    int encodage = int.Parse(line.Substring(pos + 1));
+
+                    lbPersonne.Items.Add(texte);
+                    int index = lbPersonne.Items.Count - 1;
+
+                    SendMessage(lbPersonne.Handle, smEcrire, index, encodage);
+
+                    counter = Math.Max(counter, encodage);
                 }
-           }
+
+            }
         }
 
         private void bEnregistrer_Click(object sender, EventArgs e)
