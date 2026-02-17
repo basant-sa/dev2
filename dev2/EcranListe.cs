@@ -98,40 +98,17 @@ namespace dev2
 
         private void bOuvrir_Click(object sender, EventArgs e)
         {
-            if (ofdOuvrir.ShowDialog() == DialogResult.OK)
-            {
-                NomFichier = ofdOuvrir.FileName;
+           if (ofdOuvrir.ShowDialog()==DialogResult.OK)
+           {
 
-                StreamReader sr = new StreamReader(NomFichier);
-
+                NomFichier=ofdOuvrir.FileName;
                 lbPersonne.Items.Clear();
-
-                counter = 0;
-                string ligne;
-                while ((ligne = sr.ReadLine()) != null)
+                 string[] lignes= System.IO.File.ReadAllLines(NomFichier);
+                foreach (string line in lignes) 
                 {
-                    // نفصل النص عن الرقم
-                    int pos = ligne.LastIndexOf('#');
-
-                    string texte = ligne.Substring(0, pos);
-                    int encodage = int.Parse(ligne.Substring(pos + 1));
-                    lbPersonne.Items.Add(texte);
-
-                    int index = lbPersonne.Items.Count - 1;
-
-                    // نخزن الرقم المخفي
-                    SendMessage(
-                        lbPersonne.Handle,
-                        smEcrire,
-                        index,
-                        encodage
-                    );
-                    if (encodage > counter)
-                        counter = encodage;
+                    lbPersonne.Items.Add(line);
                 }
-
-                sr.Close();
-            }
+           }
         }
 
         private void bEnregistrer_Click(object sender, EventArgs e)
