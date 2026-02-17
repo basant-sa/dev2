@@ -43,6 +43,7 @@
             this.tbNom = new System.Windows.Forms.TextBox();
             this.ofdOuvrir = new System.Windows.Forms.OpenFileDialog();
             this.sfdEnregistrer = new System.Windows.Forms.SaveFileDialog();
+            this.bModifier = new System.Windows.Forms.Button();
             this.gbDetail.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,7 +116,7 @@
             // 
             // bSupprimer
             // 
-            this.bSupprimer.Location = new System.Drawing.Point(51, 396);
+            this.bSupprimer.Location = new System.Drawing.Point(51, 377);
             this.bSupprimer.Name = "bSupprimer";
             this.bSupprimer.Size = new System.Drawing.Size(75, 23);
             this.bSupprimer.TabIndex = 7;
@@ -125,7 +126,7 @@
             // 
             // bAjouter
             // 
-            this.bAjouter.Location = new System.Drawing.Point(51, 367);
+            this.bAjouter.Location = new System.Drawing.Point(51, 348);
             this.bAjouter.Name = "bAjouter";
             this.bAjouter.Size = new System.Drawing.Size(75, 23);
             this.bAjouter.TabIndex = 8;
@@ -141,6 +142,7 @@
             this.lbPersonne.Name = "lbPersonne";
             this.lbPersonne.Size = new System.Drawing.Size(286, 212);
             this.lbPersonne.TabIndex = 9;
+            this.lbPersonne.DoubleClick += new System.EventHandler(this.lbPersonne_DoubleClick);
             // 
             // cbQualite
             // 
@@ -183,11 +185,22 @@
             // 
             this.ofdOuvrir.FileName = "openFileDialog1";
             // 
+            // bModifier
+            // 
+            this.bModifier.Location = new System.Drawing.Point(51, 406);
+            this.bModifier.Name = "bModifier";
+            this.bModifier.Size = new System.Drawing.Size(75, 23);
+            this.bModifier.TabIndex = 12;
+            this.bModifier.Text = "Modifier";
+            this.bModifier.UseVisualStyleBackColor = true;
+            this.bModifier.Click += new System.EventHandler(this.bModifier_Click);
+            // 
             // EcranListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bModifier);
             this.Controls.Add(this.gbDetail);
             this.Controls.Add(this.lbPersonne);
             this.Controls.Add(this.bAjouter);
@@ -222,5 +235,6 @@
         private System.Windows.Forms.TextBox tbNom;
         private System.Windows.Forms.OpenFileDialog ofdOuvrir;
         private System.Windows.Forms.SaveFileDialog sfdEnregistrer;
+        private System.Windows.Forms.Button bModifier;
     }
 }

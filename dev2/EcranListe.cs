@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+
 
 namespace dev2
 {
     public partial class EcranListe : Form
         
     {
-        string NomFichier = "";
+        [DllImport("user32.dll",EntryPoint ="SendMessage")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
+        private const int smLire = 0x0199;
+        private const int smEcrire = 0x019A;
+
+        private int counter = 0;
+
+        string NomFichier = "";
+        int indexModifier = -1;
         void Activer(bool etat)
         {
             lbPersonne.Enabled = etat;
@@ -41,7 +51,7 @@ namespace dev2
 
         {
             tbNom.Text = "";
-            cbQualite.Text = "";
+            cbQualite.SelectedIndex = -1;
             Activer(false);
         }
 
@@ -56,19 +66,33 @@ namespace dev2
         private void bAnnuler_Click(object sender, EventArgs e)
         {
             tbNom. Text = "";
-            cbQualite.Text = "";
+            cbQualite.SelectedIndex = -1;
             Activer(true);
         }
 
         private void bConfirmer_Click(object sender, EventArgs e)
         {
-            string nom = tbNom.Text;
-            string qualite= cbQualite.Text;
+            if (tbNom.Text == "" || cbQualite.SelectedIndex == -1)
+            {
+                MessageBox.Show("Veuillez remplir tous les champs");
+                return;
 
-            lbPersonne.Items.Add (nom + (qualite));
+            }
+
+            string text = tbNom.Text + "(" + cbQualite.Text + ")";
+
+            lbPersonne.Items.Add(text);
+
+            int index  = lbPersonne.Items.Count - 1;
+
+            counter++;
+
+            SendMessage(lbPersonne.Handle, smEcrire, index, counter);
+
             tbNom.Text = "";
-            cbQualite.Text = "";
-            Activer(true);
+            cbQualite.SelectedIndex = -1;
+
+            Activer (true);
         }
 
         private void bOuvrir_Click(object sender, EventArgs e)
@@ -98,6 +122,41 @@ namespace dev2
                         sw.WriteLine(item);
                     }
                 }
+            }
+        }
+
+        private void lbPersonne_DoubleClick(object sender, EventArgs e)
+        {
+            if (lbPersonne.SelectedIndex == -1)
+                    return;
+            string contenu=lbPersonne.SelectedItem.ToString();
+
+            int index=lbPersonne.SelectedIndex;
+            int encodage = SendMessage(lbPersonne.Handle, smLire, index, 0);
+
+            MessageBox.Show("Contenu : " + contenu +
+                                "\nIndex : " + index +
+                                "\nEncodage : " + encodage,
+                                "Information");
+
+            
+        }
+
+        private void bModifier_Click(object sender, EventArgs e)
+        {
+            if (lbPersonne.SelectedIndex != -1)
+            {
+                indexModifier = lbPersonne.SelectedIndex;
+
+                string texte = lbPersonne.SelectedItem.ToString();
+
+                int pos1 = texte.IndexOf("(");
+                int pos2 = texte.IndexOf(")");
+
+                tbNom.Text = texte.Substring(0, pos1).Trim();
+                cbQualite.Text = texte.Substring(pos1 + 1, pos2 - pos1 - 1);
+
+                Activer(false);
             }
         }
     }
