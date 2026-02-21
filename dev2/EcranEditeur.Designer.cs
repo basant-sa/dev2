@@ -30,40 +30,40 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNouveau = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuOuvrir = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEnregistrer = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuquitter = new System.Windows.Forms.ToolStripMenuItem();
+            this.editerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCopier = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCouper = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuColler = new System.Windows.Forms.ToolStripMenuItem();
+            this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.justifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuPolice = new System.Windows.Forms.ToolStripMenuItem();
-            this.caractèreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGauche = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCentre = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDroite = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPolice = new System.Windows.Forms.ToolStripMenuItem();
+            this.caractèreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGras = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItalique = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSouligne = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBarre = new System.Windows.Forms.ToolStripMenuItem();
             this.pMenu = new System.Windows.Forms.Panel();
+            this.pbQuitter = new System.Windows.Forms.PictureBox();
+            this.pbEnregistrer = new System.Windows.Forms.PictureBox();
             this.pbNouveau = new System.Windows.Forms.PictureBox();
             this.pbOuvrir = new System.Windows.Forms.PictureBox();
-            this.pbEnregistrer = new System.Windows.Forms.PictureBox();
-            this.pbQuitter = new System.Windows.Forms.PictureBox();
             this.rtbTexte = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.menuStrip1.SuspendLayout();
             this.pMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuitter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEnregistrer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNouveau)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOuvrir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnregistrer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQuitter)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -75,7 +75,7 @@
             this.formatToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -90,6 +90,31 @@
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.fichierToolStripMenuItem.Text = "Fichier ";
             // 
+            // mnuNouveau
+            // 
+            this.mnuNouveau.Name = "mnuNouveau";
+            this.mnuNouveau.Size = new System.Drawing.Size(191, 26);
+            this.mnuNouveau.Text = "Nouveau";
+            // 
+            // mnuOuvrir
+            // 
+            this.mnuOuvrir.Name = "mnuOuvrir";
+            this.mnuOuvrir.Size = new System.Drawing.Size(191, 26);
+            this.mnuOuvrir.Text = "Ouvrir";
+            // 
+            // mnuEnregistrer
+            // 
+            this.mnuEnregistrer.Name = "mnuEnregistrer";
+            this.mnuEnregistrer.Size = new System.Drawing.Size(191, 26);
+            this.mnuEnregistrer.Text = "Enregistrer";
+            // 
+            // mnuquitter
+            // 
+            this.mnuquitter.Name = "mnuquitter";
+            this.mnuquitter.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.mnuquitter.Size = new System.Drawing.Size(191, 26);
+            this.mnuquitter.Text = "Quitter";
+            // 
             // editerToolStripMenuItem
             // 
             this.editerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -99,6 +124,24 @@
             this.editerToolStripMenuItem.Name = "editerToolStripMenuItem";
             this.editerToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.editerToolStripMenuItem.Text = "Editer";
+            // 
+            // mnuCopier
+            // 
+            this.mnuCopier.Name = "mnuCopier";
+            this.mnuCopier.Size = new System.Drawing.Size(140, 26);
+            this.mnuCopier.Text = "Copier";
+            // 
+            // mnuCouper
+            // 
+            this.mnuCouper.Name = "mnuCouper";
+            this.mnuCouper.Size = new System.Drawing.Size(140, 26);
+            this.mnuCouper.Text = "Couper";
+            // 
+            // mnuColler
+            // 
+            this.mnuColler.Name = "mnuColler";
+            this.mnuColler.Size = new System.Drawing.Size(140, 26);
+            this.mnuColler.Text = "Coller";
             // 
             // formatToolStripMenuItem
             // 
@@ -110,49 +153,6 @@
             this.formatToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.formatToolStripMenuItem.Text = "Format";
             // 
-            // mnuNouveau
-            // 
-            this.mnuNouveau.Name = "mnuNouveau";
-            this.mnuNouveau.Size = new System.Drawing.Size(224, 26);
-            this.mnuNouveau.Text = "Nouveau";
-            // 
-            // mnuOuvrir
-            // 
-            this.mnuOuvrir.Name = "mnuOuvrir";
-            this.mnuOuvrir.Size = new System.Drawing.Size(224, 26);
-            this.mnuOuvrir.Text = "Ouvrir";
-            // 
-            // mnuEnregistrer
-            // 
-            this.mnuEnregistrer.Name = "mnuEnregistrer";
-            this.mnuEnregistrer.Size = new System.Drawing.Size(224, 26);
-            this.mnuEnregistrer.Text = "Enregistrer";
-            // 
-            // mnuquitter
-            // 
-            this.mnuquitter.Name = "mnuquitter";
-            this.mnuquitter.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.mnuquitter.Size = new System.Drawing.Size(224, 26);
-            this.mnuquitter.Text = "Quitter";
-            // 
-            // mnuCopier
-            // 
-            this.mnuCopier.Name = "mnuCopier";
-            this.mnuCopier.Size = new System.Drawing.Size(224, 26);
-            this.mnuCopier.Text = "Copier";
-            // 
-            // mnuCouper
-            // 
-            this.mnuCouper.Name = "mnuCouper";
-            this.mnuCouper.Size = new System.Drawing.Size(224, 26);
-            this.mnuCouper.Text = "Couper";
-            // 
-            // mnuColler
-            // 
-            this.mnuColler.Name = "mnuColler";
-            this.mnuColler.Size = new System.Drawing.Size(224, 26);
-            this.mnuColler.Text = "Coller";
-            // 
             // justifierToolStripMenuItem
             // 
             this.justifierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -160,13 +160,31 @@
             this.mnuCentre,
             this.mnuDroite});
             this.justifierToolStripMenuItem.Name = "justifierToolStripMenuItem";
-            this.justifierToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.justifierToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
             this.justifierToolStripMenuItem.Text = "Justifier";
+            // 
+            // mnuGauche
+            // 
+            this.mnuGauche.Name = "mnuGauche";
+            this.mnuGauche.Size = new System.Drawing.Size(141, 64);
+            this.mnuGauche.Text = "Gauche";
+            // 
+            // mnuCentre
+            // 
+            this.mnuCentre.Name = "mnuCentre";
+            this.mnuCentre.Size = new System.Drawing.Size(141, 64);
+            this.mnuCentre.Text = "\nCentre\n";
+            // 
+            // mnuDroite
+            // 
+            this.mnuDroite.Name = "mnuDroite";
+            this.mnuDroite.Size = new System.Drawing.Size(141, 64);
+            this.mnuDroite.Text = "\nDroite";
             // 
             // mnuPolice
             // 
             this.mnuPolice.Name = "mnuPolice";
-            this.mnuPolice.Size = new System.Drawing.Size(224, 26);
+            this.mnuPolice.Size = new System.Drawing.Size(155, 26);
             this.mnuPolice.Text = "Police";
             // 
             // caractèreToolStripMenuItem
@@ -177,49 +195,31 @@
             this.mnuSouligne,
             this.mnuBarre});
             this.caractèreToolStripMenuItem.Name = "caractèreToolStripMenuItem";
-            this.caractèreToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.caractèreToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
             this.caractèreToolStripMenuItem.Text = "Caractère";
-            // 
-            // mnuGauche
-            // 
-            this.mnuGauche.Name = "mnuGauche";
-            this.mnuGauche.Size = new System.Drawing.Size(224, 64);
-            this.mnuGauche.Text = "Gauche";
-            // 
-            // mnuCentre
-            // 
-            this.mnuCentre.Name = "mnuCentre";
-            this.mnuCentre.Size = new System.Drawing.Size(224, 64);
-            this.mnuCentre.Text = "\nCentre\n";
-            // 
-            // mnuDroite
-            // 
-            this.mnuDroite.Name = "mnuDroite";
-            this.mnuDroite.Size = new System.Drawing.Size(224, 64);
-            this.mnuDroite.Text = "\nDroite";
             // 
             // mnuGras
             // 
             this.mnuGras.Name = "mnuGras";
-            this.mnuGras.Size = new System.Drawing.Size(224, 26);
+            this.mnuGras.Size = new System.Drawing.Size(150, 26);
             this.mnuGras.Text = "Gras";
             // 
             // mnuItalique
             // 
             this.mnuItalique.Name = "mnuItalique";
-            this.mnuItalique.Size = new System.Drawing.Size(224, 26);
+            this.mnuItalique.Size = new System.Drawing.Size(150, 26);
             this.mnuItalique.Text = "Italique";
             // 
             // mnuSouligne
             // 
             this.mnuSouligne.Name = "mnuSouligne";
-            this.mnuSouligne.Size = new System.Drawing.Size(224, 26);
+            this.mnuSouligne.Size = new System.Drawing.Size(150, 26);
             this.mnuSouligne.Text = "Souligné";
             // 
             // mnuBarre
             // 
             this.mnuBarre.Name = "mnuBarre";
-            this.mnuBarre.Size = new System.Drawing.Size(224, 26);
+            this.mnuBarre.Size = new System.Drawing.Size(150, 26);
             this.mnuBarre.Text = "Barré";
             // 
             // pMenu
@@ -229,10 +229,26 @@
             this.pMenu.Controls.Add(this.pbNouveau);
             this.pMenu.Controls.Add(this.pbOuvrir);
             this.pMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pMenu.Location = new System.Drawing.Point(0, 30);
+            this.pMenu.Location = new System.Drawing.Point(0, 28);
             this.pMenu.Name = "pMenu";
             this.pMenu.Size = new System.Drawing.Size(800, 49);
             this.pMenu.TabIndex = 1;
+            // 
+            // pbQuitter
+            // 
+            this.pbQuitter.Location = new System.Drawing.Point(155, 10);
+            this.pbQuitter.Name = "pbQuitter";
+            this.pbQuitter.Size = new System.Drawing.Size(32, 32);
+            this.pbQuitter.TabIndex = 3;
+            this.pbQuitter.TabStop = false;
+            // 
+            // pbEnregistrer
+            // 
+            this.pbEnregistrer.Location = new System.Drawing.Point(117, 12);
+            this.pbEnregistrer.Name = "pbEnregistrer";
+            this.pbEnregistrer.Size = new System.Drawing.Size(32, 30);
+            this.pbEnregistrer.TabIndex = 2;
+            this.pbEnregistrer.TabStop = false;
             // 
             // pbNouveau
             // 
@@ -251,22 +267,6 @@
             this.pbOuvrir.TabIndex = 1;
             this.pbOuvrir.TabStop = false;
             // 
-            // pbEnregistrer
-            // 
-            this.pbEnregistrer.Location = new System.Drawing.Point(117, 12);
-            this.pbEnregistrer.Name = "pbEnregistrer";
-            this.pbEnregistrer.Size = new System.Drawing.Size(32, 30);
-            this.pbEnregistrer.TabIndex = 2;
-            this.pbEnregistrer.TabStop = false;
-            // 
-            // pbQuitter
-            // 
-            this.pbQuitter.Location = new System.Drawing.Point(155, 10);
-            this.pbQuitter.Name = "pbQuitter";
-            this.pbQuitter.Size = new System.Drawing.Size(32, 32);
-            this.pbQuitter.TabIndex = 3;
-            this.pbQuitter.TabStop = false;
-            // 
             // rtbTexte
             // 
             this.rtbTexte.Location = new System.Drawing.Point(0, 79);
@@ -274,6 +274,7 @@
             this.rtbTexte.Size = new System.Drawing.Size(800, 380);
             this.rtbTexte.TabIndex = 2;
             this.rtbTexte.Text = "";
+            this.rtbTexte.TextChanged += new System.EventHandler(this.rtbTexte_TextChanged);
             // 
             // openFileDialog1
             // 
@@ -290,13 +291,14 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "EcranEditeur";
             this.Text = "EcranEditeur";
+            this.Load += new System.EventHandler(this.EcranEditeur_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuitter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEnregistrer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNouveau)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOuvrir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnregistrer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbQuitter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
