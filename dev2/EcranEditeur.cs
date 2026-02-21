@@ -15,6 +15,58 @@ namespace dev2
 
         string sFichier;
         bool bModifier;
+
+        void FichierEnregistrer()
+        {
+            if (sFichier == "")
+            {
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    sFichier = saveFileDialog1.FileName;
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            rtbTexte.SaveFile(sFichier, RichTextBoxStreamType.RichText);
+            bModifier = false;
+        }
+
+
+
+
+        bool VerifierSauver()
+        {
+            if (bModifier)
+            {
+                DialogResult rep = MessageBox.Show(
+                    "Voulez-vous enregistrer les modifications ?",
+                    "Confirmation",
+                    MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Question
+                );
+
+                if (rep == DialogResult.Yes)
+                {
+                    FichierEnregistrer();
+                    return true;
+                }
+                else if (rep == DialogResult.No)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+
         public EcranEditeur()
         {
             InitializeComponent();

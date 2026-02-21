@@ -75,7 +75,7 @@
             this.formatToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -229,7 +229,7 @@
             this.pMenu.Controls.Add(this.pbNouveau);
             this.pMenu.Controls.Add(this.pbOuvrir);
             this.pMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pMenu.Location = new System.Drawing.Point(0, 28);
+            this.pMenu.Location = new System.Drawing.Point(0, 30);
             this.pMenu.Name = "pMenu";
             this.pMenu.Size = new System.Drawing.Size(800, 49);
             this.pMenu.TabIndex = 1;
