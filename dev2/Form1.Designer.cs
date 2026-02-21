@@ -40,6 +40,7 @@
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.S3 = new System.Windows.Forms.Button();
+            this.S5 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,7 +130,7 @@
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.aProposToolStripMenuItem.Text = "A Propos";
             this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
             // 
@@ -143,11 +144,22 @@
             this.S3.UseVisualStyleBackColor = true;
             this.S3.Click += new System.EventHandler(this.S3_Click);
             // 
+            // S5
+            // 
+            this.S5.Location = new System.Drawing.Point(163, 83);
+            this.S5.Name = "S5";
+            this.S5.Size = new System.Drawing.Size(75, 23);
+            this.S5.TabIndex = 3;
+            this.S5.Text = "S5";
+            this.S5.UseVisualStyleBackColor = true;
+            this.S5.Click += new System.EventHandler(this.S5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.S5);
             this.Controls.Add(this.S3);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
@@ -175,6 +187,7 @@
         private System.Windows.Forms.ToolStripMenuItem editeurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
         private System.Windows.Forms.Button S3;
+        private System.Windows.Forms.Button S5;
     }
 }
 

@@ -62,5 +62,11 @@ namespace dev2
             EcranListe L=new EcranListe();
             L.ShowDialog();
         }
+
+        private void S5_Click(object sender, EventArgs e)
+        {
+            EcranEditeur R = new EcranEditeur();
+            R.ShowDialog();
+        }
     }
 }
