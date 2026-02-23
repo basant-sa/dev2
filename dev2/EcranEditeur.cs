@@ -95,6 +95,22 @@ namespace dev2
             
         }
 
+
+        void ToggleStyle(FontStyle style)
+        {
+            if (rtbTexte.SelectionFont == null)
+                return;
+
+            Font currentFont = rtbTexte.SelectionFont;
+            FontStyle newStyle = currentFont.Style ^ style;
+
+            rtbTexte.SelectionFont = new Font(
+                currentFont.FontFamily,
+                currentFont.Size,
+                newStyle
+            );
+        }
+
         private void pbNouveau_Click(object sender, EventArgs e)
         {
             mnuNouveau_Click(sender, e);
@@ -190,6 +206,26 @@ namespace dev2
             {
                 rtbTexte.SelectionFont = fdPolice.Font;
             }
+        }
+
+        private void mnuGras_Click(object sender, EventArgs e)
+        {
+            ToggleStyle(FontStyle.Bold);
+        }
+
+        private void mnuItalique_Click(object sender, EventArgs e)
+        {
+            ToggleStyle(FontStyle.Italic);
+        }
+
+        private void mnuSouligne_Click(object sender, EventArgs e)
+        {
+            ToggleStyle(FontStyle.Underline);
+        }
+
+        private void mnuBarre_Click(object sender, EventArgs e)
+        {
+            ToggleStyle(FontStyle.Strikeout);
         }
     }
 }

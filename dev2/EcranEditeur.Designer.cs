@@ -220,26 +220,32 @@
             // mnuGras
             // 
             this.mnuGras.Name = "mnuGras";
-            this.mnuGras.Size = new System.Drawing.Size(150, 26);
+            this.mnuGras.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.mnuGras.Size = new System.Drawing.Size(224, 26);
             this.mnuGras.Text = "Gras";
+            this.mnuGras.Click += new System.EventHandler(this.mnuGras_Click);
             // 
             // mnuItalique
             // 
             this.mnuItalique.Name = "mnuItalique";
-            this.mnuItalique.Size = new System.Drawing.Size(150, 26);
+            this.mnuItalique.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.mnuItalique.Size = new System.Drawing.Size(224, 26);
             this.mnuItalique.Text = "Italique";
+            this.mnuItalique.Click += new System.EventHandler(this.mnuItalique_Click);
             // 
             // mnuSouligne
             // 
             this.mnuSouligne.Name = "mnuSouligne";
-            this.mnuSouligne.Size = new System.Drawing.Size(150, 26);
+            this.mnuSouligne.Size = new System.Drawing.Size(224, 26);
             this.mnuSouligne.Text = "Souligné";
+            this.mnuSouligne.Click += new System.EventHandler(this.mnuSouligne_Click);
             // 
             // mnuBarre
             // 
             this.mnuBarre.Name = "mnuBarre";
-            this.mnuBarre.Size = new System.Drawing.Size(150, 26);
+            this.mnuBarre.Size = new System.Drawing.Size(224, 26);
             this.mnuBarre.Text = "Barré";
+            this.mnuBarre.Click += new System.EventHandler(this.mnuBarre_Click);
             // 
             // pMenu
             // 
