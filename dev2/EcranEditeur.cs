@@ -147,5 +147,20 @@ namespace dev2
         {
             mnuquitter_Click(sender, e);
         }
+
+        private void mnuCopier_Click(object sender, EventArgs e)
+        {
+            rtbTexte.Copy();
+        }
+
+        private void mnuCouper_Click(object sender, EventArgs e)
+        {
+            rtbTexte.Cut();
+        }
+
+        private void mnuColler_Click(object sender, EventArgs e)
+        {
+            rtbTexte.Paste();
+        }
     }
 }
