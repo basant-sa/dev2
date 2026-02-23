@@ -177,5 +177,19 @@ namespace dev2
         {
             rtbTexte.SelectionAlignment=HorizontalAlignment.Right;
         }
+
+        private void mnuPolice_Click(object sender, EventArgs e)
+        {
+            if (rtbTexte.SelectionFont != null)
+            {
+                fdPolice.Font = rtbTexte.SelectionFont;
+            }
+
+            
+            if (fdPolice.ShowDialog() == DialogResult.OK)
+            {
+                rtbTexte.SelectionFont = fdPolice.Font;
+            }
+        }
     }
 }

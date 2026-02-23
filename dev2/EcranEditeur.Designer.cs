@@ -59,6 +59,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.fdPolice = new System.Windows.Forms.FontDialog();
             this.menuStrip1.SuspendLayout();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbQuitter)).BeginInit();
@@ -201,8 +202,9 @@
             // mnuPolice
             // 
             this.mnuPolice.Name = "mnuPolice";
-            this.mnuPolice.Size = new System.Drawing.Size(155, 26);
+            this.mnuPolice.Size = new System.Drawing.Size(224, 26);
             this.mnuPolice.Text = "Police";
+            this.mnuPolice.Click += new System.EventHandler(this.mnuPolice_Click);
             // 
             // caractèreToolStripMenuItem
             // 
@@ -212,7 +214,7 @@
             this.mnuSouligne,
             this.mnuBarre});
             this.caractèreToolStripMenuItem.Name = "caractèreToolStripMenuItem";
-            this.caractèreToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.caractèreToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.caractèreToolStripMenuItem.Text = "Caractère";
             // 
             // mnuGras
@@ -361,5 +363,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.FontDialog fdPolice;
     }
 }
