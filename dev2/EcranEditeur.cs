@@ -82,5 +82,70 @@ namespace dev2
         {
             bModifier = true;
         }
+
+        private void mnuNouveau_Click(object sender, EventArgs e)
+        {
+            if (!VerifierSauver())
+            
+                return;
+
+                rtbTexte.Clear();
+                sFichier = "";
+                bModifier = false;
+            
+        }
+
+        private void pbNouveau_Click(object sender, EventArgs e)
+        {
+            mnuNouveau_Click(sender, e);
+        }
+
+        private void mnuOuvrir_Click(object sender, EventArgs e)
+        {
+            if (!VerifierSauver())
+            {
+                return;
+            }
+            
+                
+                if (openFileDialog1.ShowDialog()==DialogResult.OK)
+                {
+                    sFichier=openFileDialog1.FileName;
+                    rtbTexte.LoadFile(sFichier, RichTextBoxStreamType.RichText);
+                    bModifier = false;
+                }
+            
+        }
+
+        private void pbOuvrir_Click(object sender, EventArgs e)
+        {
+            mnuOuvrir_Click(sender, e);
+        }
+
+        private void mnuEnregistrer_Click(object sender, EventArgs e)
+        {
+            FichierEnregistrer();
+        }
+
+        private void pbEnregistrer_Click(object sender, EventArgs e)
+        {
+            mnuEnregistrer_Click(sender, e);
+
+        }
+
+        private void mnuquitter_Click(object sender, EventArgs e)
+        {
+            if (!VerifierSauver()) 
+            
+                return ;
+                
+                this.Close();
+            
+        }
+
+        private void pbQuitter_Click(object sender, EventArgs e)
+        {
+            mnuquitter_Click(sender, e);
+        }
     }
 }
