@@ -174,26 +174,29 @@
             this.mnuCentre,
             this.mnuDroite});
             this.justifierToolStripMenuItem.Name = "justifierToolStripMenuItem";
-            this.justifierToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.justifierToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.justifierToolStripMenuItem.Text = "Justifier";
             // 
             // mnuGauche
             // 
             this.mnuGauche.Name = "mnuGauche";
-            this.mnuGauche.Size = new System.Drawing.Size(141, 64);
+            this.mnuGauche.Size = new System.Drawing.Size(224, 64);
             this.mnuGauche.Text = "Gauche";
+            this.mnuGauche.Click += new System.EventHandler(this.mnuGauche_Click);
             // 
             // mnuCentre
             // 
             this.mnuCentre.Name = "mnuCentre";
-            this.mnuCentre.Size = new System.Drawing.Size(141, 64);
+            this.mnuCentre.Size = new System.Drawing.Size(224, 64);
             this.mnuCentre.Text = "\nCentre\n";
+            this.mnuCentre.Click += new System.EventHandler(this.mnuCentre_Click);
             // 
             // mnuDroite
             // 
             this.mnuDroite.Name = "mnuDroite";
-            this.mnuDroite.Size = new System.Drawing.Size(141, 64);
+            this.mnuDroite.Size = new System.Drawing.Size(224, 64);
             this.mnuDroite.Text = "\nDroite";
+            this.mnuDroite.Click += new System.EventHandler(this.mnuDroite_Click);
             // 
             // mnuPolice
             // 

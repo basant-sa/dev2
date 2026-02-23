@@ -162,5 +162,20 @@ namespace dev2
         {
             rtbTexte.Paste();
         }
+
+        private void mnuGauche_Click(object sender, EventArgs e)
+        {
+            rtbTexte.SelectionAlignment = HorizontalAlignment.Left;
+        }
+
+        private void mnuCentre_Click(object sender, EventArgs e)
+        {
+            rtbTexte.SelectionAlignment=HorizontalAlignment.Center;
+        }
+
+        private void mnuDroite_Click(object sender, EventArgs e)
+        {
+            rtbTexte.SelectionAlignment=HorizontalAlignment.Right;
+        }
     }
 }
