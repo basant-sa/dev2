@@ -68,5 +68,11 @@ namespace dev2
             EcranEditeur R = new EcranEditeur();
             R.ShowDialog();
         }
+
+        private void S6_Click(object sender, EventArgs e)
+        {
+            EcranSpirographe P =new EcranSpirographe();
+            P.ShowDialog();
+        }
     }
 }
