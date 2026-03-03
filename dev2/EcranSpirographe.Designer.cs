@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.gbParametrage = new System.Windows.Forms.GroupBox();
-            this.lSommets = new System.Windows.Forms.Label();
-            this.lDensite = new System.Windows.Forms.Label();
-            this.lProfondeur = new System.Windows.Forms.Label();
-            this.tbDensites = new System.Windows.Forms.TrackBar();
-            this.tbSommets = new System.Windows.Forms.TrackBar();
-            this.tbProfondeur = new System.Windows.Forms.TrackBar();
-            this.bGo = new System.Windows.Forms.Button();
-            this.bTrait = new System.Windows.Forms.Button();
             this.BFond = new System.Windows.Forms.Button();
+            this.lSommets = new System.Windows.Forms.Label();
+            this.bTrait = new System.Windows.Forms.Button();
+            this.lDensite = new System.Windows.Forms.Label();
+            this.bGo = new System.Windows.Forms.Button();
+            this.lProfondeur = new System.Windows.Forms.Label();
+            this.tbProfondeur = new System.Windows.Forms.TrackBar();
+            this.tbSommets = new System.Windows.Forms.TrackBar();
+            this.tbDensites = new System.Windows.Forms.TrackBar();
             this.cdCouleur = new System.Windows.Forms.ColorDialog();
             this.gbParametrage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbDensites)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbSommets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbProfondeur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbSommets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbDensites)).BeginInit();
             this.SuspendLayout();
             // 
             // gbParametrage
@@ -63,6 +63,16 @@
             this.gbParametrage.TabStop = false;
             this.gbParametrage.Text = "parametrage";
             // 
+            // BFond
+            // 
+            this.BFond.Location = new System.Drawing.Point(9, 370);
+            this.BFond.Name = "BFond";
+            this.BFond.Size = new System.Drawing.Size(212, 25);
+            this.BFond.TabIndex = 9;
+            this.BFond.Text = "Fond";
+            this.BFond.UseVisualStyleBackColor = true;
+            this.BFond.Click += new System.EventHandler(this.BFond_Click);
+            // 
             // lSommets
             // 
             this.lSommets.Location = new System.Drawing.Point(6, 18);
@@ -71,6 +81,16 @@
             this.lSommets.TabIndex = 1;
             this.lSommets.Text = "Nombre de sommets(3 à 8)";
             // 
+            // bTrait
+            // 
+            this.bTrait.Location = new System.Drawing.Point(6, 320);
+            this.bTrait.Name = "bTrait";
+            this.bTrait.Size = new System.Drawing.Size(215, 33);
+            this.bTrait.TabIndex = 8;
+            this.bTrait.Text = "Trait";
+            this.bTrait.UseVisualStyleBackColor = true;
+            this.bTrait.Click += new System.EventHandler(this.bTrait_Click);
+            // 
             // lDensite
             // 
             this.lDensite.Location = new System.Drawing.Point(6, 103);
@@ -78,35 +98,6 @@
             this.lDensite.Size = new System.Drawing.Size(221, 26);
             this.lDensite.TabIndex = 2;
             this.lDensite.Text = "Densité de dessins (5 à 20)\n ";
-            // 
-            // lProfondeur
-            // 
-            this.lProfondeur.Location = new System.Drawing.Point(3, 191);
-            this.lProfondeur.Name = "lProfondeur";
-            this.lProfondeur.Size = new System.Drawing.Size(221, 26);
-            this.lProfondeur.TabIndex = 3;
-            this.lProfondeur.Text = "Profondeur de dessin (20 a 80)\n ";
-            // 
-            // tbDensites
-            // 
-            this.tbDensites.Location = new System.Drawing.Point(6, 122);
-            this.tbDensites.Name = "tbDensites";
-            this.tbDensites.Size = new System.Drawing.Size(221, 56);
-            this.tbDensites.TabIndex = 4;
-            // 
-            // tbSommets
-            // 
-            this.tbSommets.Location = new System.Drawing.Point(0, 44);
-            this.tbSommets.Name = "tbSommets";
-            this.tbSommets.Size = new System.Drawing.Size(227, 56);
-            this.tbSommets.TabIndex = 5;
-            // 
-            // tbProfondeur
-            // 
-            this.tbProfondeur.Location = new System.Drawing.Point(9, 220);
-            this.tbProfondeur.Name = "tbProfondeur";
-            this.tbProfondeur.Size = new System.Drawing.Size(215, 56);
-            this.tbProfondeur.TabIndex = 6;
             // 
             // bGo
             // 
@@ -117,23 +108,34 @@
             this.bGo.Text = "GO!";
             this.bGo.UseVisualStyleBackColor = true;
             // 
-            // bTrait
+            // lProfondeur
             // 
-            this.bTrait.Location = new System.Drawing.Point(6, 320);
-            this.bTrait.Name = "bTrait";
-            this.bTrait.Size = new System.Drawing.Size(215, 33);
-            this.bTrait.TabIndex = 8;
-            this.bTrait.Text = "Trait";
-            this.bTrait.UseVisualStyleBackColor = true;
+            this.lProfondeur.Location = new System.Drawing.Point(3, 191);
+            this.lProfondeur.Name = "lProfondeur";
+            this.lProfondeur.Size = new System.Drawing.Size(221, 26);
+            this.lProfondeur.TabIndex = 3;
+            this.lProfondeur.Text = "Profondeur de dessin (20 a 80)\n ";
             // 
-            // BFond
+            // tbProfondeur
             // 
-            this.BFond.Location = new System.Drawing.Point(9, 370);
-            this.BFond.Name = "BFond";
-            this.BFond.Size = new System.Drawing.Size(212, 25);
-            this.BFond.TabIndex = 9;
-            this.BFond.Text = "Fond";
-            this.BFond.UseVisualStyleBackColor = true;
+            this.tbProfondeur.Location = new System.Drawing.Point(9, 220);
+            this.tbProfondeur.Name = "tbProfondeur";
+            this.tbProfondeur.Size = new System.Drawing.Size(215, 56);
+            this.tbProfondeur.TabIndex = 6;
+            // 
+            // tbSommets
+            // 
+            this.tbSommets.Location = new System.Drawing.Point(0, 44);
+            this.tbSommets.Name = "tbSommets";
+            this.tbSommets.Size = new System.Drawing.Size(227, 56);
+            this.tbSommets.TabIndex = 5;
+            // 
+            // tbDensites
+            // 
+            this.tbDensites.Location = new System.Drawing.Point(6, 122);
+            this.tbDensites.Name = "tbDensites";
+            this.tbDensites.Size = new System.Drawing.Size(221, 56);
+            this.tbDensites.TabIndex = 4;
             // 
             // EcranSpirographe
             // 
@@ -145,9 +147,9 @@
             this.Text = "EcranSpirographe";
             this.gbParametrage.ResumeLayout(false);
             this.gbParametrage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbDensites)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbSommets)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbProfondeur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbSommets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbDensites)).EndInit();
             this.ResumeLayout(false);
 
         }
