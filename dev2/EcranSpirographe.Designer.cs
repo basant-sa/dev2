@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbParametrage = new System.Windows.Forms.GroupBox();
             this.BFond = new System.Windows.Forms.Button();
             this.lSommets = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@
             this.tbSommets = new System.Windows.Forms.TrackBar();
             this.tbDensites = new System.Windows.Forms.TrackBar();
             this.cdCouleur = new System.Windows.Forms.ColorDialog();
+            this.timerHorloge = new System.Windows.Forms.Timer(this.components);
             this.gbParametrage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbProfondeur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSommets)).BeginInit();
@@ -138,6 +140,12 @@
             this.tbDensites.Size = new System.Drawing.Size(221, 56);
             this.tbDensites.TabIndex = 4;
             // 
+            // timerHorloge
+            // 
+            this.timerHorloge.Enabled = true;
+            this.timerHorloge.Interval = 1000;
+            this.timerHorloge.Tick += new System.EventHandler(this.timerHorloge_Tick);
+            // 
             // EcranSpirographe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -146,6 +154,8 @@
             this.Controls.Add(this.gbParametrage);
             this.Name = "EcranSpirographe";
             this.Text = "EcranSpirographe";
+            //this.Load += new System.EventHandler(this.EcranSpirographe_Load);
+            //this.Paint += new System.Windows.Forms.PaintEventHandler(this.EcranSpirographe_Paint);
             this.gbParametrage.ResumeLayout(false);
             this.gbParametrage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbProfondeur)).EndInit();
@@ -168,5 +178,6 @@
         private System.Windows.Forms.Button bTrait;
         private System.Windows.Forms.Button BFond;
         private System.Windows.Forms.ColorDialog cdCouleur;
+        private System.Windows.Forms.Timer timerHorloge;
     }
 }

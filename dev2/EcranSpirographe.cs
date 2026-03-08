@@ -47,6 +47,23 @@ namespace dev2
                 using (Pen p = new Pen(cTrait))
                 {
                     e.Graphics.DrawPath(p, gpSauvegarde);
+
+                    Graphics g = e.Graphics;
+
+                    int r = 60;
+                    int xc = 120;
+                    int yc = 120;
+
+                    g.DrawEllipse(Pens.Black, xc - r, yc - r, 2 * r, 2 * r);
+
+                    DateTime now = DateTime.Now;
+
+                    double angleSec = Math.PI * 2 * now.Second / 60;
+
+                    int xs = xc + (int)(r * 0.9 * Math.Sin(angleSec));
+                    int ys = yc - (int)(r * 0.9 * Math.Cos(angleSec));
+
+                    g.DrawLine(Pens.Red, xc, yc, xs, ys);
                 }
             }
         }
@@ -131,5 +148,11 @@ namespace dev2
 
 
         }
+
+        private void timerHorloge_Tick(object sender, EventArgs e)
+        {
+            this.Text = DateTime.Now.ToLongTimeString();
+            Invalidate();
+        }  
     }
 }
