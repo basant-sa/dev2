@@ -42,6 +42,7 @@
             this.S3 = new System.Windows.Forms.Button();
             this.S5 = new System.Windows.Forms.Button();
             this.S6 = new System.Windows.Forms.Button();
+            this.S7 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,11 +166,22 @@
             this.S6.UseVisualStyleBackColor = true;
             this.S6.Click += new System.EventHandler(this.S6_Click);
             // 
+            // S7
+            // 
+            this.S7.Location = new System.Drawing.Point(467, 83);
+            this.S7.Name = "S7";
+            this.S7.Size = new System.Drawing.Size(75, 23);
+            this.S7.TabIndex = 5;
+            this.S7.Text = "S7";
+            this.S7.UseVisualStyleBackColor = true;
+            this.S7.Click += new System.EventHandler(this.S7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.S7);
             this.Controls.Add(this.S6);
             this.Controls.Add(this.S5);
             this.Controls.Add(this.S3);
@@ -201,6 +213,7 @@
         private System.Windows.Forms.Button S3;
         private System.Windows.Forms.Button S5;
         private System.Windows.Forms.Button S6;
+        private System.Windows.Forms.Button S7;
     }
 }
 

@@ -107,6 +107,7 @@
             this.bGo.TabIndex = 7;
             this.bGo.Text = "GO!";
             this.bGo.UseVisualStyleBackColor = true;
+            this.bGo.Click += new System.EventHandler(this.bGo_Click);
             // 
             // lProfondeur
             // 

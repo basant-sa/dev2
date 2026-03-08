@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace dev2
 {
-    public partial class Form2 : System.Windows.Forms.Form
+    public partial class FicClavierSouris : System.Windows.Forms.Form
     {
-        public Form2()
+        public FicClavierSouris()
         {
             InitializeComponent();
+        }
+
+        private void pnlSouris_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

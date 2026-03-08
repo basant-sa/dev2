@@ -13,7 +13,7 @@ using System.IO;
 
 namespace dev2
 {
-    public partial class EcranListe : Form
+    public partial class EcranListe : System.Windows.Forms.Form
         
     {
         [DllImport("user32.dll",EntryPoint ="SendMessage")]

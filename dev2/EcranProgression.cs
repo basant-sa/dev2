@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace dev2
 {
-    public partial class EcranProgression : Form
+    public partial class EcranProgression : System.Windows.Forms.Form
     {
         public EcranProgression()
         {

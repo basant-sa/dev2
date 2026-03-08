@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace dev2
 {
-    public partial class EcranEditeur : Form
+    public partial class EcranEditeur : System.Windows.Forms.Form
     {
 
         string sFichier;

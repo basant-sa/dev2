@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace dev2
 {
-    public partial class Form1 : Form
+    public partial class Form1 : System.Windows.Forms.Form
     {
         public Form1()
         {
@@ -73,6 +73,12 @@ namespace dev2
         {
             EcranSpirographe P =new EcranSpirographe();
             P.ShowDialog();
+        }
+
+        private void S7_Click(object sender, EventArgs e)
+        {
+            FicClavierSouris F=new FicClavierSouris();
+            F.ShowDialog();
         }
     }
 }

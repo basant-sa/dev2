@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace dev2
 {
-    public partial class EcranAPropos : Form
+    public partial class EcranAPropos : System.Windows.Forms.Form
     {
 
         private Cursor curseurOriginal;
