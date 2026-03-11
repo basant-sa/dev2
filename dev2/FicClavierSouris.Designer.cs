@@ -40,13 +40,10 @@
             this.tbxPositionY = new System.Windows.Forms.TextBox();
             this.tbxPositionX = new System.Windows.Forms.TextBox();
             this.tbxClicDroit = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pnlSouris.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSouris
             // 
-            this.pnlSouris.Controls.Add(this.button1);
             this.pnlSouris.Location = new System.Drawing.Point(201, 78);
             this.pnlSouris.Name = "pnlSouris";
             this.pnlSouris.Size = new System.Drawing.Size(554, 350);
@@ -115,6 +112,7 @@
             this.butRAZ.TabIndex = 7;
             this.butRAZ.Text = "RAZ";
             this.butRAZ.UseVisualStyleBackColor = true;
+            this.butRAZ.Click += new System.EventHandler(this.butRAZ_Click);
             // 
             // tbxClicGauche
             // 
@@ -144,15 +142,6 @@
             this.tbxClicDroit.Size = new System.Drawing.Size(70, 22);
             this.tbxClicDroit.TabIndex = 11;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(14, 314);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(10, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // FicClavierSouris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -172,7 +161,6 @@
             this.Controls.Add(this.pnlSouris);
             this.Name = "FicClavierSouris";
             this.Text = "FicClavierSouris";
-            this.pnlSouris.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,6 +180,5 @@
         private System.Windows.Forms.TextBox tbxPositionY;
         private System.Windows.Forms.TextBox tbxPositionX;
         private System.Windows.Forms.TextBox tbxClicDroit;
-        private System.Windows.Forms.Button button1;
     }
 }
