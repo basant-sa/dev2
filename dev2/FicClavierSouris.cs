@@ -34,6 +34,16 @@ namespace dev2
 
         private void butRAZ_Click(object sender, EventArgs e)
         {
+            nbDroit = 0;
+            nbGauche = 0;
+
+            AfficherClic();
+
+            tbxPositionX.Text = "";
+            tbxPositionY.Text = "";
+
+            lsbClavier.Items.Clear();
+
 
         }
 
@@ -73,7 +83,7 @@ namespace dev2
 
         private void FicClavierSouris_KeyDown(object sender, KeyEventArgs e)
         {
-            lsbClavier.Items.Add("keyDown:" + e.ToString());
+            lsbClavier.Items.Add("keyDown:" + e.KeyCode.ToString());
 
         }
 
