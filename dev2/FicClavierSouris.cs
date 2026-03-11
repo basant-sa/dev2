@@ -36,5 +36,39 @@ namespace dev2
         {
 
         }
+
+        private void pnlSouris_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            if (e.Button == MouseButtons.Left)
+            {
+                nbGauche++;
+
+            }
+
+            else if (e.Button == MouseButtons.Right) 
+            { 
+                nbDroit++;
+            
+            }
+
+            AfficherClic();
+
+            int largeurCase = pnlSouris.Width / 3;
+            int hauteurCase=pnlSouris.Height / 3;
+
+            int colonne = e.X / largeurCase + 1;
+            int ligne =e.Y / hauteurCase + 1;
+
+            lsbClavier.Items.Add($"clic dans ligne{ligne},colonne{colonne}");
+
+        }
+
+        private void pnlSouris_MouseMove(object sender, MouseEventArgs e)
+        {
+            tbxPositionX.Text=e.X.ToString(); 
+            tbxPositionY.Text=e.Y.ToString();
+
+        }
     }
 }

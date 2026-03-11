@@ -49,6 +49,8 @@
             this.pnlSouris.Size = new System.Drawing.Size(554, 350);
             this.pnlSouris.TabIndex = 0;
             this.pnlSouris.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSouris_Paint);
+            this.pnlSouris.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlSouris_MouseDown);
+            this.pnlSouris.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlSouris_MouseMove);
             // 
             // lblClavier
             // 
