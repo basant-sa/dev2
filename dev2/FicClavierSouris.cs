@@ -70,5 +70,22 @@ namespace dev2
             tbxPositionY.Text=e.Y.ToString();
 
         }
+
+        private void FicClavierSouris_KeyDown(object sender, KeyEventArgs e)
+        {
+            lsbClavier.Items.Add("keyDown:" + e.ToString());
+
+        }
+
+        private void FicClavierSouris_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            lsbClavier.Items.Add("keypress:"+e.KeyChar);
+
+        }
+
+        private void FicClavierSouris_KeyUp(object sender, KeyEventArgs e)
+        {
+            lsbClavier.Items.Add("keyup:"+e.KeyCode.ToString());    
+        }
     }
 }

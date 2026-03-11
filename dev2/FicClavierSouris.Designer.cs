@@ -161,8 +161,12 @@
             this.Controls.Add(this.lblClicGauche);
             this.Controls.Add(this.lblClavier);
             this.Controls.Add(this.pnlSouris);
+            this.KeyPreview = true;
             this.Name = "FicClavierSouris";
             this.Text = "FicClavierSouris";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FicClavierSouris_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FicClavierSouris_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FicClavierSouris_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
