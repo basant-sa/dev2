@@ -58,6 +58,12 @@
     <Compile Include="EcranEditeur.Designer.cs">
       <DependentUpon>EcranEditeur.cs</DependentUpon>
     </Compile>
+    <Compile Include="EcranExplorateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EcranExplorateur.Designer.cs">
+      <DependentUpon>EcranExplorateur.cs</DependentUpon>
+    </Compile>
     <Compile Include="EcranListe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EcranEditeur.resx">
       <DependentUpon>EcranEditeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EcranExplorateur.resx">
+      <DependentUpon>EcranExplorateur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EcranListe.resx">
       <DependentUpon>EcranListe.cs</DependentUpon>
