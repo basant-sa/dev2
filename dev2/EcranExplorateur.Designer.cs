@@ -42,12 +42,12 @@
             this.slMessage = new System.Windows.Forms.ToolStripStatusLabel();
             this.tvRepertoire = new System.Windows.Forms.SplitContainer();
             this.tvRepertoiree = new System.Windows.Forms.TreeView();
+            this.ilTreeView = new System.Windows.Forms.ImageList(this.components);
             this.lvFichiers = new System.Windows.Forms.ListView();
             this.NOM = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TAIL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CREA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MODI = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ilTreeView = new System.Windows.Forms.ImageList(this.components);
             this.ilGrand = new System.Windows.Forms.ImageList(this.components);
             this.ilPetit = new System.Windows.Forms.ImageList(this.components);
             this.tsCommandes.SuspendLayout();
@@ -166,6 +166,14 @@
             this.tvRepertoiree.SelectedImageIndex = 0;
             this.tvRepertoiree.Size = new System.Drawing.Size(260, 391);
             this.tvRepertoiree.TabIndex = 0;
+            this.tvRepertoiree.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.tvRepertoiree_BeforeExpand);
+            this.tvRepertoiree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvRepertoiree_AfterSelect);
+            // 
+            // ilTreeView
+            // 
+            this.ilTreeView.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.ilTreeView.ImageSize = new System.Drawing.Size(16, 16);
+            this.ilTreeView.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // lvFichiers
             // 
@@ -201,12 +209,6 @@
             // MODI
             // 
             this.MODI.Text = "Modification";
-            // 
-            // ilTreeView
-            // 
-            this.ilTreeView.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.ilTreeView.ImageSize = new System.Drawing.Size(16, 16);
-            this.ilTreeView.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // ilGrand
             // 

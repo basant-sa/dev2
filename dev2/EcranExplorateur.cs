@@ -26,8 +26,21 @@ namespace dev2
         }
 
         private void RemplirTreeView()
-        {
+        { 
             LireDisques();
+        }
+
+        private string GetChemin(TreeNode node)
+        {
+            string chemin = node.Text;
+
+            while (node.Parent != null)
+            {
+                node = node.Parent;
+                chemin = Path.Combine(node.Text, chemin);
+            }
+
+            return chemin;
         }
 
         private void LireRepertoires(string chemin, TreeNode parent)
@@ -60,7 +73,51 @@ namespace dev2
                 tvRepertoiree.Nodes.Add(noeud);
                 LireRepertoires(disque, noeud);
             }
+            
+        }
 
+        private void tvRepertoiree_BeforeExpand(object sender, TreeViewCancelEventArgs e)
+        {
+            e.Node.Nodes.Clear();
+
+            string chemin= GetChemin(e.Node);
+            LireRepertoires(chemin, e.Node);
+
+
+        }
+
+        private void tvRepertoiree_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            string chemin = GetChemin(e.Node);
+
+            LireFichiers(chemin);
+        }
+
+        private void LireFichiers(string chemin)
+        {
+            try
+            {
+                lvFichiers.Items.Clear();
+
+                string[] fichiers = Directory.GetFiles(chemin);
+
+                foreach (string fichier in fichiers)
+                {
+                    FileInfo info = new FileInfo(fichier);
+
+                    ListViewItem item = new ListViewItem(info.Name);
+
+                    item.SubItems.Add(info.Length.ToString());
+                    item.SubItems.Add(info.CreationTime.ToString());
+                    item.SubItems.Add(info.LastWriteTime.ToString());
+
+                    lvFichiers.Items.Add(item);
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }
