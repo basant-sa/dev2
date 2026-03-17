@@ -22,6 +22,44 @@ namespace dev2
 
         private void EcranExplorateur_Load(object sender, EventArgs e)
         {
+            RemplirTreeView();
+        }
+
+        private void RemplirTreeView()
+        {
+            LireDisques();
+        }
+
+        private void LireRepertoires(string chemin, TreeNode parent)
+        {
+            try
+            {
+                string[] repertoires = Directory.GetDirectories(chemin);
+
+                foreach (string rep in repertoires)
+                {
+                    TreeNode noeud = new TreeNode(Path.GetFileName(rep));
+
+                  
+                    noeud.Nodes.Add("...");
+
+                    parent.Nodes.Add(noeud);
+                }
+            }
+            catch { }
+        }
+
+        private void LireDisques()
+        {
+            tvRepertoiree.Nodes.Clear();
+            string[]disques=Environment.GetLogicalDrives();
+
+            foreach (string disque in disques)
+            {
+                TreeNode noeud=new TreeNode(disque);    
+                tvRepertoiree.Nodes.Add(noeud);
+                LireRepertoires(disque, noeud);
+            }
 
         }
     }

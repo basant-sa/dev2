@@ -80,5 +80,11 @@ namespace dev2
             FicClavierSouris F=new FicClavierSouris();
             F.ShowDialog();
         }
+
+        private void S8_Click(object sender, EventArgs e)
+        {
+            EcranExplorateur P=new EcranExplorateur();
+            P.ShowDialog();
+        }
     }
 }
