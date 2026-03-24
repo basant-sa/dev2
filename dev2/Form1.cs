@@ -86,5 +86,11 @@ namespace dev2
             EcranExplorateur P=new EcranExplorateur();
             P.ShowDialog();
         }
+
+        private void S9_Click(object sender, EventArgs e)
+        {
+            GPSMapViewer G=new GPSMapViewer();
+            G.ShowDialog();
+        }
     }
 }

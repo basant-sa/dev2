@@ -67,7 +67,7 @@
             this.tsaDetail});
             this.tsCommandes.Location = new System.Drawing.Point(0, 0);
             this.tsCommandes.Name = "tsCommandes";
-            this.tsCommandes.Size = new System.Drawing.Size(800, 27);
+            this.tsCommandes.Size = new System.Drawing.Size(800, 31);
             this.tsCommandes.TabIndex = 0;
             this.tsCommandes.Text = "toolStrip1";
             // 
@@ -77,13 +77,13 @@
             this.tsbQuitter.Image = ((System.Drawing.Image)(resources.GetObject("tsbQuitter.Image")));
             this.tsbQuitter.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbQuitter.Name = "tsbQuitter";
-            this.tsbQuitter.Size = new System.Drawing.Size(29, 24);
+            this.tsbQuitter.Size = new System.Drawing.Size(29, 28);
             this.tsbQuitter.Text = "Quitter";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // tsaDetail
             // 
@@ -96,7 +96,7 @@
             this.tsaDetail.Image = ((System.Drawing.Image)(resources.GetObject("tsaDetail.Image")));
             this.tsaDetail.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsaDetail.Name = "tsaDetail";
-            this.tsaDetail.Size = new System.Drawing.Size(34, 24);
+            this.tsaDetail.Size = new System.Drawing.Size(34, 28);
             this.tsaDetail.Text = "Apparence";
             // 
             // tsaPetitesIconesSS
@@ -143,7 +143,7 @@
             // tvRepertoire
             // 
             this.tvRepertoire.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tvRepertoire.Location = new System.Drawing.Point(0, 27);
+            this.tvRepertoire.Location = new System.Drawing.Point(0, 31);
             this.tvRepertoire.Name = "tvRepertoire";
             // 
             // tvRepertoire.Panel1
@@ -153,7 +153,7 @@
             // tvRepertoire.Panel2
             // 
             this.tvRepertoire.Panel2.Controls.Add(this.lvFichiers);
-            this.tvRepertoire.Size = new System.Drawing.Size(800, 397);
+            this.tvRepertoire.Size = new System.Drawing.Size(800, 393);
             this.tvRepertoire.SplitterDistance = 266;
             this.tvRepertoire.TabIndex = 2;
             // 

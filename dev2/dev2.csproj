@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.Common.145.0.260\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.145.0.260\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\chromiumembeddedframework.runtime.win-x86.145.0.26\build\chromiumembeddedframework.runtime.win-x86.props" Condition="Exists('..\packages\chromiumembeddedframework.runtime.win-x86.145.0.26\build\chromiumembeddedframework.runtime.win-x86.props')" />
+  <Import Project="..\packages\chromiumembeddedframework.runtime.win-x64.145.0.26\build\chromiumembeddedframework.runtime.win-x64.props" Condition="Exists('..\packages\chromiumembeddedframework.runtime.win-x64.145.0.26\build\chromiumembeddedframework.runtime.win-x64.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +15,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +38,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CefSharp, Version=145.0.260.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.145.0.260\lib\net462\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core, Version=145.0.260.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.145.0.260\lib\net462\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms, Version=145.0.260.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.WinForms.145.0.260\lib\net462\CefSharp.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Ports, Version=10.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Ports.10.0.5\lib\net462\System.IO.Ports.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -100,6 +117,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="GPSMapViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPSMapViewer.Designer.cs">
+      <DependentUpon>GPSMapViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EcranAPropos.resx">
@@ -126,6 +149,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GPSMapViewer.resx">
+      <DependentUpon>GPSMapViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -135,6 +161,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -149,4 +176,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\chromiumembeddedframework.runtime.win-x64.145.0.26\build\chromiumembeddedframework.runtime.win-x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\chromiumembeddedframework.runtime.win-x64.145.0.26\build\chromiumembeddedframework.runtime.win-x64.props'))" />
+    <Error Condition="!Exists('..\packages\chromiumembeddedframework.runtime.win-x86.145.0.26\build\chromiumembeddedframework.runtime.win-x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\chromiumembeddedframework.runtime.win-x86.145.0.26\build\chromiumembeddedframework.runtime.win-x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.145.0.260\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.145.0.260\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.145.0.260\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.145.0.260\build\CefSharp.Common.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.145.0.260\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.145.0.260\build\CefSharp.Common.targets')" />
 </Project>
