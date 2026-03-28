@@ -92,5 +92,12 @@ namespace dev2
             GPSMapViewer G=new GPSMapViewer();
             G.ShowDialog();
         }
+
+        private void S10_Click(object sender, EventArgs e)
+        {
+            FicBDDirect F = new FicBDDirect();
+            F.ShowDialog();
+
+        }
     }
 }
