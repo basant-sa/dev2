@@ -34,8 +34,8 @@
             this.bAjouter = new System.Windows.Forms.Button();
             this.lNom = new System.Windows.Forms.Label();
             this.lPrenom = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbPrenom = new System.Windows.Forms.TextBox();
+            this.tbNom = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbConsole
@@ -65,6 +65,7 @@
             this.bDenombrer.TabIndex = 2;
             this.bDenombrer.Text = "Denombrer";
             this.bDenombrer.UseVisualStyleBackColor = true;
+            this.bDenombrer.Click += new System.EventHandler(this.bDenombrer_Click);
             // 
             // bAjouter
             // 
@@ -74,6 +75,7 @@
             this.bAjouter.TabIndex = 3;
             this.bAjouter.Text = "Ajouter";
             this.bAjouter.UseVisualStyleBackColor = true;
+            this.bAjouter.Click += new System.EventHandler(this.bAjouter_Click);
             // 
             // lNom
             // 
@@ -93,27 +95,27 @@
             this.lPrenom.TabIndex = 5;
             this.lPrenom.Text = "Prenom";
             // 
-            // textBox1
+            // tbPrenom
             // 
-            this.textBox1.Location = new System.Drawing.Point(595, 328);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 22);
-            this.textBox1.TabIndex = 6;
+            this.tbPrenom.Location = new System.Drawing.Point(595, 328);
+            this.tbPrenom.Name = "tbPrenom";
+            this.tbPrenom.Size = new System.Drawing.Size(144, 22);
+            this.tbPrenom.TabIndex = 6;
             // 
-            // textBox2
+            // tbNom
             // 
-            this.textBox2.Location = new System.Drawing.Point(595, 220);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(144, 22);
-            this.textBox2.TabIndex = 7;
+            this.tbNom.Location = new System.Drawing.Point(595, 220);
+            this.tbNom.Name = "tbNom";
+            this.tbNom.Size = new System.Drawing.Size(144, 22);
+            this.tbNom.TabIndex = 7;
             // 
             // FicBDDirect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbNom);
+            this.Controls.Add(this.tbPrenom);
             this.Controls.Add(this.lPrenom);
             this.Controls.Add(this.lNom);
             this.Controls.Add(this.bAjouter);
@@ -135,7 +137,7 @@
         private System.Windows.Forms.Button bAjouter;
         private System.Windows.Forms.Label lNom;
         private System.Windows.Forms.Label lPrenom;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbPrenom;
+        private System.Windows.Forms.TextBox tbNom;
     }
 }
