@@ -23,6 +23,7 @@ namespace dev2
         {
             lbConsole.Items.Clear();
 
+
             using (SQLiteConnection conn = new SQLiteConnection(connectionString)) 
             { 
                 conn.Open();
