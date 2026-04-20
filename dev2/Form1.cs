@@ -99,5 +99,12 @@ namespace dev2
             F.ShowDialog();
 
         }
+
+        private void S12_Click(object sender, EventArgs e)
+        {
+            S12 S=new S12();
+
+            S.ShowDialog();
+        }
     }
 }
