@@ -106,5 +106,11 @@ namespace dev2
 
             S.ShowDialog();
         }
+
+        private void S14_Click(object sender, EventArgs e)
+        {
+            S14 S = new S14();
+            S.ShowDialog();
+        }
     }
 }
