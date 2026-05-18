@@ -52,6 +52,7 @@
             this.bDessiner.TabIndex = 1;
             this.bDessiner.Text = "Dessiner";
             this.bDessiner.UseVisualStyleBackColor = true;
+            this.bDessiner.Click += new System.EventHandler(this.bDessiner_Click);
             // 
             // pDessin
             // 
@@ -59,6 +60,7 @@
             this.pDessin.Name = "pDessin";
             this.pDessin.Size = new System.Drawing.Size(612, 434);
             this.pDessin.TabIndex = 2;
+            this.pDessin.Paint += new System.Windows.Forms.PaintEventHandler(this.pDessin_Paint);
             // 
             // lbMonPoint
             // 

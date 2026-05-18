@@ -69,5 +69,42 @@ namespace dev2
 
             }
         }
+
+        private void bDessiner_Click(object sender, EventArgs e)
+        {
+            pDessin.Invalidate();
+        }
+
+        private void pDessin_Paint(object sender, PaintEventArgs e)
+        {
+            if (alData.Count == 0) return;
+
+            Graphics g = e.Graphics;
+
+            
+            int W = pDessin.ClientSize.Width;
+            int H = pDessin.ClientSize.Height;
+
+            MonPoint last = (MonPoint)alData[alData.Count - 1];
+            int maxX = last.X;
+            if (maxX == 0) maxX = 1;   
+
+            int baseline = H / 2;
+            g.DrawLine(Pens.Gray, 0, baseline, W, baseline);
+
+            Pen pen = new Pen(Color.Blue, 2);
+
+            for (int i = 0; i < alData.Count; i++)
+            {
+                MonPoint p = (MonPoint)alData[i];
+
+                int screenX = (int)((double)p.X / maxX * W);
+                int screenY = (int)(baseline - ((double)p.Y / 100.0) * baseline);
+
+                g.DrawLine(pen, screenX, baseline, screenX, screenY);
+            }
+
+            pen.Dispose();
+        }
     }
 }
