@@ -48,6 +48,7 @@
             this.S10 = new System.Windows.Forms.Button();
             this.S12 = new System.Windows.Forms.Button();
             this.S14 = new System.Windows.Forms.Button();
+            this.Histogramme = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -231,11 +232,22 @@
             this.S14.UseVisualStyleBackColor = true;
             this.S14.Click += new System.EventHandler(this.S14_Click);
             // 
+            // Histogramme
+            // 
+            this.Histogramme.Location = new System.Drawing.Point(413, 143);
+            this.Histogramme.Name = "Histogramme";
+            this.Histogramme.Size = new System.Drawing.Size(129, 23);
+            this.Histogramme.TabIndex = 11;
+            this.Histogramme.Text = "Histogramme";
+            this.Histogramme.UseVisualStyleBackColor = true;
+            this.Histogramme.Click += new System.EventHandler(this.Histogramme_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Histogramme);
             this.Controls.Add(this.S14);
             this.Controls.Add(this.S12);
             this.Controls.Add(this.S10);
@@ -279,6 +291,7 @@
         private System.Windows.Forms.Button S10;
         private System.Windows.Forms.Button S12;
         private System.Windows.Forms.Button S14;
+        private System.Windows.Forms.Button Histogramme;
     }
 }
 

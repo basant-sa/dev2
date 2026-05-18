@@ -118,6 +118,12 @@
     <Compile Include="FicClavierSouris.Designer.cs">
       <DependentUpon>FicClavierSouris.cs</DependentUpon>
     </Compile>
+    <Compile Include="FicHistogramme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FicHistogramme.Designer.cs">
+      <DependentUpon>FicHistogramme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FicClavierSouris.resx">
       <DependentUpon>FicClavierSouris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FicHistogramme.resx">
+      <DependentUpon>FicHistogramme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

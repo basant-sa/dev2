@@ -112,5 +112,11 @@ namespace dev2
             S14 S = new S14();
             S.ShowDialog();
         }
+
+        private void Histogramme_Click(object sender, EventArgs e)
+        {
+            FicHistogramme H= new FicHistogramme();  
+            H.ShowDialog();
+        }
     }
 }
