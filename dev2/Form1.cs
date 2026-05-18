@@ -116,7 +116,7 @@ namespace dev2
         private void Histogramme_Click(object sender, EventArgs e)
         {
             FicHistogramme H= new FicHistogramme();  
-            H.ShowDialog();
+            H.Show();
         }
     }
 }

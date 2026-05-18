@@ -42,6 +42,7 @@
             this.bCreer.TabIndex = 0;
             this.bCreer.Text = "Creer";
             this.bCreer.UseVisualStyleBackColor = true;
+            this.bCreer.Click += new System.EventHandler(this.bCreer_Click);
             // 
             // bDessiner
             // 
